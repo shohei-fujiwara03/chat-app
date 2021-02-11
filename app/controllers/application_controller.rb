@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :authenticate_user!
+  # 処理が呼ばれた段階で、ユーザーがログインしていなければ、そのユーザーをログイン画面に遷移させる。
   before_action :configure_permitted_parameters, if: :devise_controller?
   # deviseコントローラーからのアクションの場合に実行される
 
